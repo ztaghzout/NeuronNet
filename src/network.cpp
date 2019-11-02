@@ -195,7 +195,7 @@ std::set<size_t> Network :: step(const std::vector<double>& thalamic_input){
 			
 		}
 		
-		neurons[i].input(w*thalamic_input[i]+0.5*i_inh+i_exc);
+		neurons[i].input(w*thalamic_input[i]+0.5*i_exc-i_inh);
 		
 		neurons[i].step();
 	}
